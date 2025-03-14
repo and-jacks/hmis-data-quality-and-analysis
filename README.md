@@ -38,7 +38,6 @@ hmis-analysis-toolkit/
 ├── reports/                        # Generated reports
 │   └── hmis_comprehensive_report.html      # Example of a generated report
 ├── plots/                          # Generated visualizations
-├── tests/                          # Test scripts
 ├── hmis_synthetic_data_generator.py     # Creates synthetic test data
 ├── hmis_master_analysis.py             # Runs all analyses and generates report
 ├── requirements.txt                # Python dependencies
