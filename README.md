@@ -32,17 +32,16 @@ hmis-analysis-toolkit/
 ├── data/                           # Data directory
 │   └── hmis_synthetic_data/        # Generated synthetic HMIS data
 ├── scripts/                        # Analysis scripts
-│   ├── hmis_synthetic_data_generator.py     # Creates synthetic test data
 │   ├── hmis_analysis_script.py             # Main analysis functionality
 │   ├── hmis_recidivism_analysis.py         # Returns to homelessness analysis
 │   ├── hmis_demographic_gaps_analysis.py   # Demographic disparities analysis
-│   └── hmis_master_analysis.py             # Runs all analyses and generates report
 ├── reports/                        # Generated reports
 │   └── hmis_comprehensive_report.html      # Example of a generated report
 ├── plots/                          # Generated visualizations
 ├── tests/                          # Test scripts
+├── hmis_synthetic_data_generator.py     # Creates synthetic test data
+├── hmis_master_analysis.py             # Runs all analyses and generates report
 ├── requirements.txt                # Python dependencies
-├── LICENSE                         # Project license
 └── README.md                       # Project documentation
 ```
 
@@ -96,16 +95,6 @@ python scripts/hmis_master_analysis.py
 
 The comprehensive report will be saved to `reports/hmis_comprehensive_report.html` and visualizations will be saved to the `plots/` directory.
 
-## Adapting to Your HMIS Data
-
-To use this toolkit with your actual HMIS data:
-
-1. Replace the data loading sections in the scripts to read your HMIS export files
-2. Adjust field names and codes to match your HMIS implementation if needed
-3. Modify the data directory paths in the scripts as necessary
-
-Detailed instructions for adapting the scripts are provided in the documentation for each script.
-
 ## Requirements
 
 - Python 3.8+
@@ -115,25 +104,7 @@ Detailed instructions for adapting the scripts are provided in the documentation
 - seaborn
 - Other dependencies listed in requirements.txt
 
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
 ## Acknowledgments
 
 - This toolkit is designed to work with data formatted according to HUD's HMIS Data Standards
 - The synthetic data generator creates fictional data that resembles real-world HMIS data patterns
-
-## Contact
-
-If you have any questions or feedback, please open an issue on this repository.
