@@ -29,8 +29,7 @@ The toolkit helps answer critical questions such as:
 
 ```
 hmis-analysis-toolkit/
-├── data/                           # Data directory
-│   └── hmis_synthetic_data/        # Generated synthetic HMIS data
+├── hmis_synthetic_data/        # Generated synthetic HMIS data directory
 ├── scripts/                        # Analysis scripts
 │   ├── hmis_analysis_script.py             # Main analysis functionality
 │   ├── hmis_recidivism_analysis.py         # Returns to homelessness analysis
