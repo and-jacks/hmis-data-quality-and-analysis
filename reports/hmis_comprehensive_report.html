@@ -1,0 +1,403 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HMIS Data Analysis Report</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 20px;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+            h1, h2, h3, h4 {
+                color: #2c3e50;
+                margin-top: 30px;
+            }
+            h1 {
+                border-bottom: 2px solid #3498db;
+                padding-bottom: 10px;
+            }
+            h2 {
+                border-bottom: 1px solid #bdc3c7;
+                padding-bottom: 5px;
+            }
+            table {
+                border-collapse: collapse;
+                width: 100%;
+                margin: 20px 0;
+            }
+            th, td {
+                text-align: left;
+                padding: 12px;
+                border-bottom: 1px solid #ddd;
+            }
+            th {
+                background-color: #f2f2f2;
+            }
+            tr:hover {
+                background-color: #f5f5f5;
+            }
+            .highlights {
+                background-color: #eaf7ff;
+                padding: 15px;
+                border-left: 5px solid #3498db;
+                margin: 20px 0;
+            }
+            .warning {
+                background-color: #fff8e1;
+                padding: 15px;
+                border-left: 5px solid #ffc107;
+                margin: 20px 0;
+            }
+            .success {
+                background-color: #e8f5e9;
+                padding: 15px;
+                border-left: 5px solid #4caf50;
+                margin: 20px 0;
+            }
+            .error {
+                background-color: #ffebee;
+                padding: 15px;
+                border-left: 5px solid #f44336;
+                margin: 20px 0;
+            }
+            .dashboard {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin: 20px 0;
+            }
+            .dashboard-item {
+                background-color: #f9f9f9;
+                border-radius: 5px;
+                padding: 20px;
+                width: 22%;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                margin-bottom: 20px;
+            }
+            .dashboard-item h3 {
+                margin-top: 0;
+                font-size: 16px;
+                color: #7f8c8d;
+            }
+            .dashboard-item p {
+                font-size: 24px;
+                font-weight: bold;
+                margin: 10px 0;
+                color: #2c3e50;
+            }
+            .column-container {
+                display: flex;
+                justify-content: space-between;
+                margin: 20px 0;
+            }
+            .column {
+                width: 48%;
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+                margin: 20px auto;
+                border: 1px solid #ddd;
+            }
+            .recommendations {
+                background-color: #f0f9ff;
+                padding: 20px;
+                border-radius: 5px;
+                margin: 20px 0;
+            }
+            .recommendations h3 {
+                margin-top: 0;
+            }
+            .recommendations li {
+                margin-bottom: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>HMIS Data Analysis Report</h1>
+        <p>This report provides comprehensive analysis of HMIS data from January 2022 to June 2024.</p>
+        
+        <div class="dashboard">
+            <div class="dashboard-item">
+                <h3>Total Clients</h3>
+                <p>500</p>
+            </div>
+            <div class="dashboard-item">
+                <h3>Active Clients</h3>
+                <p>129</p>
+            </div>
+            <div class="dashboard-item">
+                <h3>Total Enrollments</h3>
+                <p>1000</p>
+            </div>
+            <div class="dashboard-item">
+                <h3>Total Projects</h3>
+                <p>10</p>
+            </div>
+        </div>
+        
+        <h2>Executive Summary</h2>
+        <div class="highlights">
+            <p>This analysis is based on synthetic HMIS data covering the period from January 2022 to June 2024. 
+            The data includes information on 500 clients with 1000 enrollments across 10 different projects.</p>
+        </div>
+        
+        <h3>Key Findings</h3>
+        <ul>
+            <li>The overall success rate (exit to permanent housing) is approximately 42.8%.</li>
+            <li>Approximately 69.3% of clients have multiple program enrollments.</li>
+            <li>The average length of stay across all projects is 84.2 days.</li>
+        </ul>
+        
+        <h2>Data Quality Assessment</h2>
+        <div class="warning">
+            <h3>Data Quality Issues Identified</h3>
+            <p>The following data quality issues have been identified:</p>
+            <ul>
+                <li><strong>Missing Data:</strong> SSN information is missing or incomplete for approximately 26.2% of clients.</li>
+                <li><strong>Logical Inconsistencies:</strong> The analysis found potential duplicate enrollments (same person, same project) for some clients.</li>
+                <li><strong>Unknown Exit Destinations:</strong> Approximately 9.4% of exits have unknown/missing destination information.</li>
+            </ul>
+        </div>
+        
+        <h2>Trends Analysis (2022-2024)</h2>
+        <div class="column-container">
+            <div class="column">
+                <h3>Enrollments by Quarter</h3>
+                <img src="../plots/quarterly_enrollment_trends.png" alt="Quarterly Enrollment Trends">
+                <p>The chart shows the trend in homeless program enrollments by quarter from 2022 to 2024.</p>
+            </div>
+            <div class="column">
+                <h3>Project Type Distribution</h3>
+                <img src="../plots/project_type_trends.png" alt="Project Type Trends">
+                <p>This chart illustrates the distribution of enrollments across different project types over time.</p>
+            </div>
+        </div>
+        
+        <div class="column-container">
+            <div class="column">
+                <h3>Age Distribution Trends</h3>
+                <img src="../plots/age_distribution_trends.png" alt="Age Distribution Trends">
+                <p>The chart shows how the age distribution of clients has changed over time.</p>
+            </div>
+            <div class="column">
+                <h3>Demographic Summary</h3>
+                <img src="../plots/demographic_summary.png" alt="Demographic Summary">
+                <p>This chart provides a summary of the key demographic characteristics of clients in the HMIS system.</p>
+            </div>
+        </div>
+        
+        <h2>Discharge Destination Analysis</h2>
+        <div class="column-container">
+            <div class="column">
+                <h3>Overall Discharge Destinations</h3>
+                <img src="../plots/overall_discharge_destinations.png" alt="Overall Discharge Destinations">
+                <p>This chart shows the distribution of exit destinations for all clients who have exited programs.</p>
+            </div>
+            <div class="column">
+                <h3>Destinations by Project Type</h3>
+                <img src="../plots/destinations_by_project_type.png" alt="Destinations by Project Type">
+                <p>The chart illustrates how exit destinations vary across different project types.</p>
+            </div>
+        </div>
+        
+        <div class="column-container">
+            <div class="column">
+                <h3>Success Rates by Project Type</h3>
+                <img src="../plots/success_rates_by_project_type.png" alt="Success Rates by Project Type">
+                <p>This chart shows the percentage of exits to permanent housing by project type.</p>
+            </div>
+            <div class="column">
+                <h3>Destination Trends by Year</h3>
+                <img src="../plots/destinations_by_year.png" alt="Destination Trends by Year">
+                <p>The chart illustrates how exit destinations have changed over time.</p>
+            </div>
+        </div>
+        
+        <h2>Prior Living Situation Analysis</h2>
+        <div class="column-container">
+            <div class="column">
+                <h3>Overall Prior Living Situations</h3>
+                <img src="../plots/overall_prior_situations.png" alt="Overall Prior Living Situations">
+                <p>This chart shows the distribution of prior living situations for all clients entering programs.</p>
+            </div>
+            <div class="column">
+                <h3>Prior Situations by Project Type</h3>
+                <img src="../plots/prior_situations_by_project_type.png" alt="Prior Situations by Project Type">
+                <p>The chart illustrates how prior living situations vary across different project types.</p>
+            </div>
+        </div>
+        
+        <div class="column-container">
+            <div class="column">
+                <h3>Prior Situation to Destination Flow</h3>
+                <img src="../plots/prior_to_destination.png" alt="Prior Situation to Destination Flow">
+                <p>This chart shows the relationship between prior living situations and exit destinations.</p>
+            </div>
+            <div class="column">
+                <h3>Prior Situation Trends by Year</h3>
+                <img src="../plots/prior_situations_by_year.png" alt="Prior Situation Trends by Year">
+                <p>The chart illustrates how prior living situations have changed over time.</p>
+            </div>
+        </div>
+        
+        <h2>Recidivism Analysis</h2>
+        <div class="column-container">
+            <div class="column">
+                <h3>Distribution of Enrollment Counts</h3>
+                <img src="../plots/enrollment_counts_distribution.png" alt="Enrollment Counts Distribution">
+                <p>This chart shows the distribution of how many program enrollments clients have.</p>
+            </div>
+            <div class="column">
+                <h3>Days Between Enrollments</h3>
+                <img src="../plots/days_between_enrollments.png" alt="Days Between Enrollments">
+                <p>The chart illustrates the distribution of time between program enrollments for clients with multiple enrollments.</p>
+            </div>
+        </div>
+        
+        <div class="column-container">
+            <div class="column">
+                <h3>Returns to Homelessness</h3>
+                <img src="../plots/returns_to_homelessness.png" alt="Returns to Homelessness">
+                <p>This chart shows the pattern of returns to homelessness after exits to permanent housing.</p>
+            </div>
+            <div class="column">
+                <h3>Days Between by Destination</h3>
+                <img src="../plots/days_between_by_destination.png" alt="Days Between by Destination">
+                <p>The chart illustrates how time between enrollments varies based on the exit destination of the previous enrollment.</p>
+            </div>
+        </div>
+        
+        <h2>Chronic Homelessness Analysis</h2>
+        <div class="column-container">
+            <div class="column">
+                <h3>Chronic Homelessness by Year</h3>
+                <img src="../plots/chronic_homelessness_by_year.png" alt="Chronic Homelessness by Year">
+                <p>This chart shows the trend in chronic homelessness percentages over time.</p>
+            </div>
+            <div class="column">
+                <h3>Chronic vs. Non-Chronic Outcomes</h3>
+                <img src="../plots/chronic_vs_nonchronic_outcomes.png" alt="Chronic vs. Non-Chronic Outcomes">
+                <p>The chart compares exit destinations between chronically homeless clients and non-chronically homeless clients.</p>
+            </div>
+        </div>
+        
+        <h2>Length of Stay Analysis</h2>
+        <div class="column-container">
+            <div class="column">
+                <h3>Length of Stay by Project Type</h3>
+                <img src="../plots/length_of_stay_by_project.png" alt="Length of Stay by Project Type">
+                <p>This chart shows how length of stay varies across different project types.</p>
+            </div>
+            <div class="column">
+                <h3>Length of Stay Distribution</h3>
+                <img src="../plots/length_of_stay_distribution.png" alt="Length of Stay Distribution">
+                <p>The chart illustrates the overall distribution of length of stay for all clients.</p>
+            </div>
+        </div>
+        
+        <div class="column-container">
+            <div class="column">
+                <h3>Length of Stay by Year</h3>
+                <img src="../plots/length_of_stay_by_year.png" alt="Length of Stay by Year">
+                <p>This chart shows how average and median length of stay has changed over time.</p>
+            </div>
+            <div class="column">
+                <h3>Success by Length of Stay</h3>
+                <img src="../plots/success_by_length_of_stay.png" alt="Success by Length of Stay">
+                <p>The chart illustrates how success rates (exits to permanent housing) correlate with length of stay.</p>
+            </div>
+        </div>
+        
+        <h2>Demographic Outcome Disparities</h2>
+        <div class="column-container">
+            <div class="column">
+                <h3>Success Rates by Age</h3>
+                <img src="../plots/success_by_age.png" alt="Success Rates by Age">
+                <p>This chart shows how permanent housing success rates vary by age group.</p>
+            </div>
+            <div class="column">
+                <h3>Success Rates by Race/Ethnicity</h3>
+                <img src="../plots/success_by_race.png" alt="Success Rates by Race/Ethnicity">
+                <p>The chart illustrates disparities in permanent housing outcomes based on race and ethnicity.</p>
+            </div>
+        </div>
+        
+        <div class="column-container">
+            <div class="column">
+                <h3>Success Rates by Gender</h3>
+                <img src="../plots/success_by_gender.png" alt="Success Rates by Gender">
+                <p>This chart shows how permanent housing success rates vary by gender.</p>
+            </div>
+            <div class="column">
+                <h3>Shelter Utilization Trends</h3>
+                <img src="../plots/shelter_utilization_trends.png" alt="Shelter Utilization Trends">
+                <p>The chart illustrates shelter utilization rates over time by project type.</p>
+            </div>
+        </div>
+        
+        <h2>Service Gaps Analysis</h2>
+        <div class="column-container">
+            <div class="column">
+                <h3>Needs vs. Resources</h3>
+                <img src="../plots/needs_vs_resources.png" alt="Needs vs. Resources">
+                <p>This chart compares the distribution of client needs (prior situations) with available resources (project types).</p>
+            </div>
+            <div class="column">
+                <h3>Service Gaps by Population</h3>
+                <img src="../plots/service_gaps.png" alt="Service Gaps by Population">
+                <p>The chart highlights potential service gaps for specific populations (veterans, youth, and clients with disabilities).</p>
+            </div>
+        </div>
+        
+        <h2>Key Recommendations</h2>
+        <div class="recommendations">
+            <h3>Data Quality Improvements</h3>
+            <ol>
+                <li><strong>Address missing data:</strong> Implement processes to ensure complete data collection, especially for critical fields like SSN, DOB, and exit destinations.</li>
+                <li><strong>Prevent duplicate enrollments:</strong> Enhance data entry procedures to prevent duplicate enrollments for the same client in the same project.</li>
+                <li><strong>Improve discharge destination tracking:</strong> Reduce the percentage of unknown exit destinations through better exit interview processes.</li>
+            </ol>
+            
+            <h3>System Performance Improvements</h3>
+            <ol>
+                <li><strong>Focus on reducing returns to homelessness:</strong> Implement stronger follow-up support for clients exiting to permanent housing.</li>
+                <li><strong>Address length of stay disparities:</strong> Review policies and practices in projects with longer-than-average lengths of stay.</li>
+                <li><strong>Improve success rates for vulnerable populations:</strong> Develop specialized services to address the needs of chronically homeless individuals and other vulnerable groups.</li>
+            </ol>
+            
+            <h3>Resource Allocation Recommendations</h3>
+            <ol>
+                <li><strong>Address service gaps:</strong> Increase resources for underserved populations, particularly veterans.</li>
+                <li><strong>Optimize project capacity:</strong> Review utilization rates across projects and reallocate resources from underutilized projects to high-demand areas.</li>
+                <li><strong>Enhance prevention services:</strong> Implement more robust prevention strategies to reduce new entries into homelessness.</li>
+            </ol>
+        </div>
+        
+        <h2>Conclusion</h2>
+        <div class="success">
+            <p>This comprehensive analysis provides insights into homelessness trends, program performance, and service gaps from 2022 to 2024. 
+            The data reveals both successes and challenges in addressing homelessness in the community.</p>
+            
+            <p>Key opportunities for improvement include:</p>
+            <ul>
+                <li>Enhancing data quality to support more accurate analysis and decision-making</li>
+                <li>Addressing disparities in outcomes across demographic groups</li>
+                <li>Optimizing resource allocation to better meet the needs of specific populations</li>
+                <li>Strengthening support services to reduce returns to homelessness</li>
+            </ul>
+            
+            <p>By implementing the recommendations outlined in this report, the community can work toward more effective and equitable homeless services.</p>
+        </div>
+        
+        <p style="text-align: center; margin-top: 50px; color: #7f8c8d;">Generated on March 13, 2025</p>
+    </body>
+    </html>
+    

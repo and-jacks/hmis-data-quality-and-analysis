@@ -1,0 +1,35 @@
+graph TD
+    A[HMIS Analysis Toolkit] --> B[scripts]
+    A --> C[data]
+    A --> D[reports]
+    A --> E[plots]
+    A --> F[tests]
+    A --> G[documentation]
+    
+    B --> B1[hmis_synthetic_data_generator.py]
+    B --> B2[hmis_analysis_script.py]
+    B --> B3[hmis_recidivism_analysis.py]
+    B --> B4[hmis_demographic_gaps_analysis.py]
+    B --> B5[hmis_master_analysis.py]
+    
+    C --> C1[hmis_synthetic_data]
+    C1 --> C11[clients.csv]
+    C1 --> C12[enrollments.csv]
+    C1 --> C13[projects.csv]
+    C1 --> C14[organizations.csv]
+    C1 --> C15[living_situation.csv]
+    
+    D --> D1[hmis_comprehensive_report.html]
+    
+    E --> E1[Trends Plots]
+    E --> E2[Demographic Plots]
+    E --> E3[Outcome Plots]
+    E --> E4[Service Gap Plots]
+    
+    F --> F1[test_data_generator.py]
+    F --> F2[test_analysis.py]
+    
+    G --> G1[README.md]
+    G --> G2[requirements.txt]
+    G --> G3[LICENSE]
+    G --> G4[contribution_guidelines.md]

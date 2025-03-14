@@ -1,0 +1,11 @@
+ProjectID,ProjectName,OrganizationID,ProjectType,BedCount,ContinuumCode,Operating_StartDate,Operating_EndDate
+56ce3197,Main Street Emergency Shelter,9fae6ccc,0,33,NY-123,2020-06-12,
+35b7dfe8,Overflow Night Shelter,9fae6ccc,1,16,NY-123,2019-03-08,
+b29ebd61,New Beginnings Transitional Housing,a7c13e48,2,10,NY-123,2019-01-14,
+e2205dac,Permanent Housing First,7a449ef0,3,17,NY-123,2019-06-23,
+092ef273,Rapid Rehousing Program,7a449ef0,13,13,NY-123,2019-10-30,
+479c2ab9,Second Chance Transitional Housing,7a449ef0,2,17,NY-123,2020-05-21,
+816bbf6d,Family Emergency Shelter,9fae6ccc,0,36,NY-123,2019-09-30,
+61939874,Young Adult Rapid Rehousing,edcc2837,13,19,NY-123,2019-05-09,
+40470a32,Veterans Transitional Housing,9fae6ccc,2,10,NY-123,2020-03-23,
+535d458f,Supportive Housing for Seniors,edcc2837,3,32,NY-123,2020-12-26,
